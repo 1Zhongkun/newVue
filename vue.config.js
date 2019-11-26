@@ -78,7 +78,7 @@ module.exports = {
   css: {
     // 默认情况下，只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块。设置为 true 后你就可以去掉文件名中的 .
     // module 并将所有的 *.(css|scss|sass|less|styl(us)?) 文件视为 CSS Modules 模块。
-    modules: false,
+    modules: true,
     // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。
     extract: true,
     // 是否构建样式地图，false 将提高构建速度
@@ -96,7 +96,7 @@ module.exports = {
   //所有 webpack-dev-server 的选项都支持
   devServer: {
     open: true,
-    host: '127.0.0.1',
+    host: '192.168.0.109',
     port: 3000,
     https: false,
     hotOnly: true,
@@ -112,5 +112,10 @@ module.exports = {
     }
   },
   // 第三方插件配置
-  pluginOptions: {}
+  pluginOptions: {
+    loader:{
+      test:/vue-preview.scr.*?js$/,
+      loader:'babel'
+    }
+  }
 };

@@ -10,6 +10,7 @@
            
            
        </div>
+       <!--从父组件拿到信息给子组件-->
        <commentbox :newsid="this.id"></commentbox>
     </div>
     
@@ -41,6 +42,7 @@
 <script>
 import {Toast} from 'mint-ui';
 import Comment from "../news/Comment.vue";
+
 export default {
     data() {
         return {
@@ -63,7 +65,8 @@ export default {
          }
     },
     components:{
-        'commentbox':Comment
+        'commentbox':Comment,
+       
     }
 }
 </script>

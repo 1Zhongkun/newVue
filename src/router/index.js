@@ -6,7 +6,12 @@ import Search from '../views/Search.vue'
 import Member from '../views/Member.vue'
 import NewList from '../news/NewList.vue'
 import NewInfo from "../news/NewInfo.vue";
-import Comment from "../news/Comment.vue";
+import PhotoList from "../photos/PhotoList.vue"
+import PhotoInfo from "../photos/PhotoInfo.vue";
+import ProductList from "../products/ProductList.vue";
+import GoodsInfo from "../products/GoodsInfo.vue";
+import goodscomment from '../goods/goodscomment.vue';
+import goodsdesc from '../goods/goodsdesc.vue';
 
 Vue.use(VueRouter)
 
@@ -47,6 +52,33 @@ const routes = [
   {
     path: "/home/newsinfo/:id",
     component: NewInfo
+  },
+  {
+    path: "/home/photolist",
+    component: PhotoList
+  },
+  {
+    path: "/home/photoinfo/:id",
+    component: PhotoInfo
+  },
+  {
+    path: "/home/goodslist",
+    component: ProductList
+  },
+  {
+    path: "/home/goodsinfo/:id",
+    component: GoodsInfo
+  },
+  {
+    path: "/home/goodscomment/:id",
+    component: goodscomment,
+    name:'goodscomment'
+  }
+  ,
+  {
+    path: "/home/goodsdesc/:id",
+    component: goodsdesc,
+    name:'goodsdesc'
   }
 ];
 
